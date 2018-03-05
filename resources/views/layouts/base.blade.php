@@ -4,9 +4,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document1</title>
-    <meta name="description" content="{{config('appdescription')}}">
-    <meta name ="keywords" content="{{config('appkeywords')}}">
+    <title>{{ config('app.name', 'app.title') }}</title>
+    <meta name="description" content="{{config('app.description')}}">
+    <meta name ="keywords" content="{{config('app.keywords')}}">
     @section('styles')
     <link rel="stylesheet" href="{{asset('public/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('public/style.css')}}">
