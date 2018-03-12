@@ -21,11 +21,11 @@
     <h1 class="logotext">Название</h1>
     <nav class="menutop">
 
-        <a href="#">Главная</a>(
+        <a href="{{asset('/')}}">Главная</a>
         <a href="#">Новости</a>
-        <a href="#">Контакты</a>
+        <a href="{{asset('contacts')}}">Контакты</a>
         <a href="#">Вопросы и Ответы</a>
-        <a href="#">Картинки</a>
+        <a href="{{asset('picture')}}">Картинки</a>
 
     </nav>
 
