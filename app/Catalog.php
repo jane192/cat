@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Catalog extends Model
 {
         
-protected $fillable=['name','catalog','description'];
+protected $fillable=['name','catalog','parent_id'];
 }

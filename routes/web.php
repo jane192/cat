@@ -18,4 +18,5 @@ Route::get('/', 'BaseController@getIndex');
 
 Route::get('/articles', 'BaseController@getStatics');
 Route::post('/home/add','HomeController@postIndex');
+Route::get('home/delete/{id}','HomeController@getDelete');
 Route::get('{id}', 'BaseController@getStatic');// Всегда ставится последним
