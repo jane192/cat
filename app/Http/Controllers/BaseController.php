@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Maintext;
 
+
 class BaseController extends Controller
 {
     public function getIndex()
@@ -26,4 +27,5 @@ class BaseController extends Controller
         $all = Maintext::where('lang', 'ru')->orderBY('id', 'DESC')-> paginate(20);
         return view('statics', compact('all'));
     }
+    
 }

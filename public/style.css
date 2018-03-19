@@ -1,79 +1,89 @@
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
 }
-#header{
+
+#header {
     height: 220px;
     background-image: url(img/razpolos07.jpg);
     margin-bottom: 25px;
 }
 
-.foto{
-    float:left; 
-   width: 15%;
-   
+.foto {
+    float: left;
+    width: 15%;
+
 }
-.logotext{
-    float:right;
+
+.logotext {
+    float: right;
     margin-bottom: 147px;
-   
+
 }
-.menutop a{
-   text-decoration: none;
+
+.menutop a {
+    text-decoration: none;
     color: white;
-    flex:1;
+    flex: 1;
     padding: 10px 5px;
     text-align: center;
 }
 
-.menutop {   
-    clear:both;
-  list-style: none;
+
+
+.menutop {
+    clear: both;
+    list-style: none;
     display: flex;
-    background:red;
-    width:100%;
-   
+    background: red;
+    width: 100%;
+
 }
-.menutop a:hover{
+
+.menutop a:hover {
     background: gold;
     color: black;
 }
-.one{     
-   height: 500px;
-   background-image: url(img/photo1.jpg);
-     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.two{
+
+.one {
     height: 500px;
-    background-image: url(img/photo3.jpg); 
+    background-image: url(img/photo1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-   
-    
 }
-footer{
-    clear:both;
+
+.two {
+    height: 500px;
+    background-image: url(img/photo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+footer {
+    clear: both;
     background-image: grey;
-    height:30px;
-    color:grey;
+    height: 30px;
+    color: grey;
     padding-left: 30px;
     text-align: center;
     text-decoration: none;
 }
-footer a{
+
+footer a {
     color: green;
-   
-}
-footer a:hover{ 
-    text-decoration: none;
- color: red;
+
 }
 
-nav{
+footer a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+nav {
     clear: both;
     text-align: center;
 }
-
