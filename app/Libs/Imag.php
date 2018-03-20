@@ -35,6 +35,10 @@ class Imag {
             }
     }
     public function picdel($pic){
+        if (name_pic!null){
+        $pic->delete($name_pic); 
+        }
+       
         
     }
     

@@ -66,22 +66,26 @@ public $cats;
         
     }
     public function postEdit(ProductRequest $r, $id=null){
-         $r['user_id']=Auth::user()->id;
-       unset($r['_token']);
+//         $r['user_id']=Auth::user()->id;
+//       unset($r['_token']);
         
         //$r['picture']='';
-         $r['status']='';
-        Product::updateOrCreate(['id'=>$id], $r->all());
-        //$obj=Product::find($id);
-        //$obj->name=$r['name'];
-        //$obj->price=$r['price'];
-        //$obj->body=$r['body'];
-        //$obj->product_code=$r['product_code'];
-        //$obj->save();
+         //$r['status']='';
+        //Product::updateOrCreate(['id'=>$id], $r->all());
+        $obj=Product::find($id);
+        $obj->name=$r['name'];
+        $obj->price=$r['price'];
+        $obj->body=$r['body'];
+        $obj->product_code=$r['product_code'];
+        $obj->save();
         
         return redirect('/home');
         
     }
     
+    public function getDeleteImage(ProductRequest $r, $id=null){
+        $obj=Product::find($id)->delete();
+        return redirect('/home');
+    }
     
 }
