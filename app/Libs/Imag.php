@@ -14,7 +14,7 @@ class Imag {
                         mkdir($dir,0777,true);
                     }
                 }else{
-                    $dir ='uploads';
+                    $dir ='load';
                 }
                 if($name!=null){
                     $name_pic=$name;
@@ -34,7 +34,12 @@ class Imag {
                 return false;
             }
     }
-    public function picdel($pic){
+    public function picdel($puth){
+        if ($puth){
+            $dir='load';          
+            unlink($dir.'/'.$puth); 
+            unlink($dir.'/s_'.$puth); 
+        }
         
     }
     

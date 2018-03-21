@@ -36,6 +36,10 @@ require __DIR__.'/../vendor/autoload.php';
 */
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
+$app ->bind('puth.public',function(){
+    return base_path.'/public';
+    
+});
 
 /*
 |--------------------------------------------------------------------------

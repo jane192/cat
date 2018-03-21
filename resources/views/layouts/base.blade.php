@@ -22,7 +22,7 @@
         <nav class="menutop">
 
             <a href="{{asset('/')}}">Главная</a>
-            <a href="#">Новости</a>
+            <a href="{{asset('/news')}}">Новости</a>
             <a href="{{asset('contacts')}}">Контакты</a>
             <a href="#">Вопросы и Ответы</a>
             <a href="{{asset('picture')}}">Картинки</a>

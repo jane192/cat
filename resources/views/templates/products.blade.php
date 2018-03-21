@@ -15,7 +15,7 @@
     <tr>
         <td width="200">
             <a href="#" class="link" data_id="{{asset($one['id']) }}"><img
-                                        src="{{asset('public/uploads/'.$one->picture)}}" alt=" " width=200px></a>
+                                        src="{{asset('load/'.$one->picture)}}" alt=" " width=200px></a>
 
         </td>
         <td>
@@ -30,6 +30,7 @@
         <td>
             <a href="#" class="btn btn-default" onClick="delete_position('/home/delete/{{$one->id}}','Вы действительно хотите удалить?')">Удалить</a>
             <a href="{{asset('home/edit/'.$one->id)}}" class="btn btn-default">Редактировать</a>
+
         </td>
     </tr>
     @endforeach

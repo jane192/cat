@@ -28,7 +28,7 @@ public $cats;
         
     { 
         $cats=$this->cats;
-     $products=Product::orderBy('id','DESC')->paginate(5);
+     $products=Product::orderBy('id','DESC')->orderBy('id','DESC')->paginate(5);
         return view('home',compact('cats','products'));
     }    
     public function postIndex(ProductRequest $r){
@@ -36,6 +36,7 @@ public $cats;
         
                             
             $pic =\App::make('\App\Libs\Imag')->url($_FILES['picture1']['tmp_name']);
+          
                 
                    $r['picture']=$pic; 
  
@@ -55,8 +56,11 @@ public $cats;
         
     }
     public function getDelete($id=null){
-        Product::find($id)->delete();
+       $obj =  Product::find($id);
+
         //Product::where('id',$id)->delete(); или так
+        $pic =\App::make('\App\Libs\Imag')->picdel($obj->picture);
+        $obj ->delete();
         return redirect('/home');
     }
     public function getEdit($id=null){
@@ -82,6 +86,7 @@ public $cats;
         return redirect('/home');
         
     }
+   
     
     
 }
