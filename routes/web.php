@@ -23,4 +23,5 @@ Route::get('home/edit/{id}','HomeController@getEdit')->where('id','[0-9]');
 Route::get('news','NewsController@getAll');
 Route::get('news/{id}','NewsController@getOne');
 Route::post('home/edit/{id}','HomeController@postEdit')->where('id','[0-9]');
+Route::get('home/deleteImage/{id}','HomeController@getDeleteImage')->where('id','[0-9]');
 Route::get('{id}', 'BaseController@getStatic');// Всегда ставится последним

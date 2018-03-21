@@ -34,12 +34,20 @@ class Imag {
                 return false;
             }
     }
+<<<<<<< HEAD
     public function picdel($puth){
         if ($puth){
             $dir='load';          
             unlink($dir.'/'.$puth); 
             unlink($dir.'/s_'.$puth); 
         }
+=======
+    public function picdel($pic){
+        if (name_pic!null){
+        $pic->delete($name_pic); 
+        }
+       
+>>>>>>> 2a4b856d3d950dd8166a2d7fa4e04b5161e171bf
         
     }
     
