@@ -30,11 +30,8 @@
         <td>
             <a href="#" class="btn btn-default" onClick="delete_position('/home/delete/{{$one->id}}','Вы действительно хотите удалить?')">Удалить</a>
             <a href="{{asset('home/edit/'.$one->id)}}" class="btn btn-default">Редактировать</a>
-<<<<<<< HEAD
 
-=======
-            <a href="#" class="btn btn-default" onClick="delete_position('/home/deleteImage/{{$one->id}}','Вы действительно хотите удалить изображение?')">Удалить изображение</a>
->>>>>>> 2a4b856d3d950dd8166a2d7fa4e04b5161e171bf
+
         </td>
     </tr>
     @endforeach

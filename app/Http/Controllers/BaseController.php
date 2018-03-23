@@ -8,10 +8,11 @@ use App\Maintext;
 
 class BaseController extends Controller
 {
-    public function getIndex()
+    public function getIndex(Request $request)
     {
+        $acc=$request->acc;
         $text = Maintext::where('url', 'index')->first();
-        return view('index', compact('text'));
+        return view('index', compact('text','acc'));
 
     }
 

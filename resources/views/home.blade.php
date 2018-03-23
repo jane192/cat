@@ -18,7 +18,10 @@
                         {!!csrf_field()!!}
                         <div class="form-group">
                             <label for="exampleInputName">Название</label>
-                            <input type="text" class="form-control" name="name" id="exampleInputName" placeholder="Name">
+                            <input type="text" class="form-control" name="name" id="exampleInputName" placeholder="Name"> @if ($errors->has('name'))
+                            <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span> @endif
                         </div>
                         <div class="form-group">
                             <label for="catalog_id">Каталог</label>

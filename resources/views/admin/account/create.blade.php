@@ -16,40 +16,20 @@
     </div>
 </div>
 
-{!! Form::open(array('files' => true, 'route' => config('quickadmin.route').'.news.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
+{!! Form::open(array('files' => true, 'route' => config('quickadmin.route').'.account.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
-    {!! Form::label('name', 'name*', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('user_id', 'user_id*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('name', old('name'), array('class'=>'form-control')) !!}
+        {!! Form::select('user_id', $user, old('user_id'), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('body', 'body', array('class'=>'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::textarea('body', old('body'), array('class'=>'form-control ckeditor')) !!}
-        
-    </div>
-</div>
-   <div class="form-group">
-    {!! Form::label('preview', 'preview', array('class'=>'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::textarea('preview', old('preview'), array('class'=>'form-control')) !!}
-        
-    </div>
-</div>
-   <div class="form-group">
     {!! Form::label('picture', 'picture', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::file('picture') !!}
         {!! Form::hidden('picture_w', 4096) !!}
         {!! Form::hidden('picture_h', 4096) !!}
-        
-    </div>
-</div><div class="form-group">
-    {!! Form::label('url', 'url', array('class'=>'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::text('url', old('url'), array('class'=>'form-control')) !!}
         
     </div>
 </div>

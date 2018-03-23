@@ -8,15 +8,15 @@
     <title>{{ config('app.name', 'app.title') }}</title>
     <meta name="description" content="{{config('app.description')}}">
     <meta name="keywords" content="{{config('app.keywords')}}"> @section('styles')
-    <link rel="stylesheet" href="{{asset('public/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/style.css')}}"> @show
+    <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('style.css')}}"> @show
 
 </head>
 
 <body>
     <header id="header">
         <div class="logo">
-            <img class="foto" src="{{asset('public/img/photo.jpg')}}" alt="один">
+            <img class="foto" src="{{asset('img/photo.jpg')}}" alt="один">
         </div>
         <h1 class="logotext">Название</h1>
         <nav class="menutop">
@@ -36,8 +36,8 @@
             <a href="#" class="btn btn-block btn-primary">Разработка сайтов</a>
             <a href="#" class="btn btn-block btn-warning">Тестирование</a>
             <a href="#" class="btn btn-block btn-danger">Продвижение</a>
-            <a href="#" class="btn btn-block btn-info">Музыка</a>
-            <a href="#" class="btn btn-block btn-success">Видео</a>
+            <a href="{{asset('music')}}" class="btn btn-block btn-info">Музыка</a>
+            <a href="{{asset('video')}}" class="btn btn-block btn-success">Видео</a>
         </div>
         <div class="two col-md-8 col-xs-12">
             @yield('content')
